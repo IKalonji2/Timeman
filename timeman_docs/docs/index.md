@@ -20,16 +20,18 @@ Timeman is a modern and efficient time and invoice management tool build by Time
 
 ### Project installation
 
+Depending on how you would like to run the applications, you may use one of the following options
+
 Clone the repository
 
     $git clone https://github.com/IKalonji2/Timeman.git
     $cd Timeman
 
+#### Option 1: Individual Docker builds
+
 Build the timeman_api Flask project
 
     $cd timeman_api # change directory
-
-    $pip install -r requirements.txt # install required packages
 
     $docker build -t <give-the-image-a-name> . # build a docker image for the backend api
 
@@ -39,13 +41,41 @@ Build the timeman_app Angular project
 
     $cd timeman-app # change directory
 
-    $npm install # install required packages
-
     $docker build -t <give-the-image-a-name> . # build a docker image for the backend api
 
     $docker run -p 9090:9090 <name-you-gave-your-image>
 
 The project should now be running Docker containers locally
+
+#### Option 2: Docker compose
+
+In the Timeman project root, run:
+
+    usr/home/Timeman$ docker-compose up
+
+This will build both services as defined in the docker-compose.yaml
+
+#### Option 3: Local builds
+
+Build the timeman_api Flask project
+
+    $cd timeman_api # change directory
+
+    $pip install -r requirements.txt
+
+    $python main.py # build a docker image for the backend api
+
+    
+
+Build the timeman_app Angular project
+
+    $cd timeman-app # change directory
+
+    $npm install
+
+    $npm start
+
+The project should now be locally
 
 ### Updating configurations
 
