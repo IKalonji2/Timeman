@@ -27,19 +27,40 @@ def create_employee():
         "idNumber":"",
         "taxRef":"",
         "contactNumber": "",
-        "correspondent": "",
-        "correspondentEmail": "",
-        "clientEmailGeneral": ""
+        "emailAddr": "",
+        "nextOfKin": "",
+        "nextOfKindContactNumber": "",
+        "nextOfKinEmail": "",
+        "Domicili":""
     }
     """
     pass
 
 @admin_blueprint.route('/capture-po/')
 def capture_purchase_order():
-    """do waht you need to do"""
+    """
+    Data transfer contract:
+    {
+        "employeeId": [""],
+        "clientId":"",
+        "amount":"",
+        "description": "",
+        "date": "",
+    }
+    """
     pass
 
 @admin_blueprint.route('/capture-adhoc-po/')
 def capture_adhoc_purchase_order():
-    """do waht you need to do"""
+    """
+    Data transfer contract:
+    {
+        "employeeId": "",
+        "clientId":"",
+        "amount":"",
+        "description": "",
+        "reason":""
+        "date": "",
+    }
+    """
     pass
