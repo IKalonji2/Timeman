@@ -62,5 +62,6 @@ def capture_adhoc_purchase_order():
         "reason":""
         "date": "",
     }
+    expected values
     """
     pass
